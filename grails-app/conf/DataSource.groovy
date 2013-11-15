@@ -19,24 +19,12 @@ environments {
             url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
-    /*test {
+    test {
         dataSource {
             dbCreate = "update"
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
-    }*/
-    
-    test {
-            dataSource {
-            dbCreate = "validate"
-                url = "jdbc:postgresql://localhost:5432/inttest"
-                username = "nathan"
-                password = "password"
-                driverClassName = "org.postgresql.Driver"
-                dialect = org.hibernate.dialect.PostgreSQLDialect
-                logSql = true
-            }
-        }
+    }
     production {
         dataSource {
             dbCreate = "update"
